@@ -1,0 +1,10 @@
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 768px;
+  background: radial-gradient(circle, skyblue, #3374ba);
+  color: #222;
+}
