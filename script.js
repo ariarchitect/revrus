@@ -29,6 +29,7 @@ function revrus(match) {
     for(i=0; i < shortcuts.length; i++){
         if ( !shortcuts[i].includes("Ctrl") && !shortcuts[i].includes("Shift") && !shortcuts[i].includes("Alt") ) {
             newshortcuts.push(shortcuts[i].replace(/[A-Z]/g, m => replacer[m]));
+            newshortcuts.push(newshortcuts[newshortcuts.length-1].toUpperCase())
         }
     }
     return 'Shortcuts="'+uniq(shortcuts.concat(newshortcuts)).join('#') + '"'; 
