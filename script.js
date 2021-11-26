@@ -27,7 +27,7 @@ function revrus(match) {
     shortcuts = match.replace('Shortcuts=','').replace(/"/g,'').split('#'); //
     newshortcuts = []
     for(i=0; i < shortcuts.length; i++){
-        if ( !shortcuts[i].includes("Ctrl") && !shortcuts[i].includes("Shift") && !shortcuts[i].includes("Alt") ) {
+        if ( !shortcuts[i].includes("Ctrl") && !shortcuts[i].includes("Shift") && !shortcuts[i].includes("Alt") && !shortcuts[i].includes("Fn") ) {
             newshortcuts.push(shortcuts[i].replace(/[A-Z]/g, m => replacer[m]));
             newshortcuts.push(newshortcuts[newshortcuts.length-1].toUpperCase())
         }
